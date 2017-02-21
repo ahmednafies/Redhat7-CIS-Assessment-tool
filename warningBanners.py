@@ -92,3 +92,60 @@ def check_permissions_on_etc_issue_net():
         print('WARNING: please check the benchmark "'+config+'" ')
         print('-----------------------------------------------------')
         return False
+
+# ----- 1.7.2 Ensure GDM login banner is configured (Scored) ---- #
+
+def check_file_exits():
+    command = 'ls /etc/dconf/profile/ | grep gdm'
+    output = 'gdm'
+    terminal_variable = os.popen(command)
+    terminal_output = terminal_variable.read()
+
+    if output in terminal_output:
+        return True
+    else:
+        return False
+
+
+def check_file_contents():
+    command = "egrep -r 'user-db:user|system-db:gdm|file-db:/usr/share/gdm/greeter-dconf-defaults' /etc/dconf/profile/gdm"
+    output1 = 'user-db:user'
+    output2 = 'system-db:gdm'
+    output3 = 'file-db:/usr/share/gdm/greeter-dconf-defaults'
+
+    terminal_variable = os.popen(command)
+    terminal_output = terminal_variable.read()
+
+    if output1 in terminal_output:
+        if output2 in terminal_output:
+            if output3 in terminal_output:
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+
+
+def check_gdm_login_banner_configured():
+
+    config = '1.7.2 Ensure GDM login banner is configured (Scored)'
+    print('checking "' + config + '" ..... ')
+
+
+    gdm_file_exits = check_file_exits()
+    gdm_file_contents = check_file_contents()
+
+    if (gdm_file_exits == False):
+        print('gdm file does not exist')
+        return False
+    else:
+        if (gdm_file_contents == False):
+            print("Your system has NOT been configured correctly")
+            print('WARNING: please check the benchmark "' + config + '" ')
+            print('-----------------------------------------------------')
+            return False
+        else:
+            print('test was successful ... ')
+            print('-----------------------------------------------------')

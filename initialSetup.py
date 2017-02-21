@@ -99,12 +99,12 @@ def run():
 #    mandatoryAccessControl.check_SElinux_installed()
 
 #------1.7 Warning banners ----------------------#
-    warningBanners.check_message_of_the_day_configured()
-    warningBanners.check_localLogin_warningBanner_configured()
-    warningBanners.check_remotelogin_warningBanner_configured()
-    warningBanners.check_permissions_on_etc_motd()
-    warningBanners.check_permissions_on_etc_issue()
-    warningBanners.check_permissions_on_etc_issue_net()
-
+    # warningBanners.check_message_of_the_day_configured()
+    # warningBanners.check_localLogin_warningBanner_configured()
+    # warningBanners.check_remotelogin_warningBanner_configured()
+    # warningBanners.check_permissions_on_etc_motd()
+    # warningBanners.check_permissions_on_etc_issue()
+    # warningBanners.check_permissions_on_etc_issue_net()
+    warningBanners.check_gdm_login_banner_configured()
 #----------------------------------------------------------------------#
 run()
