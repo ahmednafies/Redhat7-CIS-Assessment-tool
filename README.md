@@ -29,6 +29,7 @@ configured (Not Scored)
 
 
 included but requires sudo rights
+
 -1.4.1 Ensure permissions on bootloader config are configured (Scored) - requires root access
 
 -1.4.2 Ensure bootloader password is set (Scored) - requires root access

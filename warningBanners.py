@@ -1,6 +1,7 @@
 import os
 import source
-
+import shlex
+from subprocess import Popen,PIPE
 #----------1.7.1.1 Ensure message of the day is configured properly (Scored)------#
 
 def check_message_of_the_day_configured():
@@ -149,3 +150,24 @@ def check_gdm_login_banner_configured():
         else:
             print('test was successful ... ')
             print('-----------------------------------------------------')
+
+# ----- 1.8 Ensure updates, patches, and additional security software are installed (Not Scored) ----#
+def check_updates_patches_installed():
+
+    config = '1.8 Ensure updates, patches, and additional security software are installed (Not Scored)'
+    print('checking "' + config + '" ..... ')
+
+    command = 'yum check-update'
+
+    process = Popen(shlex.split(command), stdout=PIPE)
+    process.communicate()  # execute it, the output goes to the stdout
+    exit_code = str(process.wait())
+
+    if '100' in exit_code:
+        source.return_function(False,config)
+    elif '0' in exit_code:
+        source.return_function(True,config)
+    else:
+        print('error')
+
+

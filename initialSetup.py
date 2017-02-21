@@ -105,6 +105,7 @@ def run():
     # warningBanners.check_permissions_on_etc_motd()
     # warningBanners.check_permissions_on_etc_issue()
     # warningBanners.check_permissions_on_etc_issue_net()
-    warningBanners.check_gdm_login_banner_configured()
+    # warningBanners.check_gdm_login_banner_configured()
+    warningBanners.check_updates_patches_installed()
 #----------------------------------------------------------------------#
 run()
