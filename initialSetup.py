@@ -104,6 +104,7 @@ def run():
     warningBanners.check_remotelogin_warningBanner_configured()
     warningBanners.check_permissions_on_etc_motd()
     warningBanners.check_permissions_on_etc_issue()
+    warningBanners.check_permissions_on_etc_issue_net()
 
 #----------------------------------------------------------------------#
 run()
