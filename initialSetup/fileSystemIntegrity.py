@@ -1,6 +1,8 @@
-import re
-import source
 import os
+import re
+
+import source
+
 
 # ---------- 1.3.1 Ensure AIDE is installed (Scored) -------------#
 
@@ -15,8 +17,8 @@ def check_aide_installed():
     word = re.compile(r'not installed')
 
     if (word.search(terminal_output)):
-        source.return_function(False,config)
+        source.return_function(False, config)
     else:
-        source.return_function(True,config)
+        source.return_function(True, config)
 
 

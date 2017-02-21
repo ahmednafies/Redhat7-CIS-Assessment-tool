@@ -1,14 +1,17 @@
 import os
-import source
 import shlex
 from subprocess import Popen,PIPE
+
+import source
+
+
 #----------1.7.1.1 Ensure message of the day is configured properly (Scored)------#
 
 def check_message_of_the_day_configured():
     config = '1.7.1.1 Ensure message of the day is configured properly (Scored)'
     command = "egrep '(\\v|\\r|\\m|\\s)' /etc/motd"
     output = ''
-    source.output_isEqualTo_terminal_output(config,command,output)
+    source.output_isEqualTo_terminal_output(config, command, output)
 
 # ------ 1.7.1.2 Ensure local login warning banner is configured properly (Not Scored)----#
 
@@ -16,7 +19,7 @@ def check_localLogin_warningBanner_configured():
     config = '1.7.1.2 Ensure local login warning banner is configured properly (Not Scored)'
     command = "egrep '(\\v|\\r|\\m|\\s)' /etc/issue"
     output = ''
-    source.output_isEqualTo_terminal_output(config,command,output)
+    source.output_isEqualTo_terminal_output(config, command, output)
 
 #----- 1.7.1.3 Ensure remote login warning banner is configured properly (Not Scored)------#
 
@@ -24,7 +27,7 @@ def check_remotelogin_warningBanner_configured():
     config = '1.7.1.3 Ensure remote login warning banner is configured properly (Not Scored)'
     command = "egrep '(\\v|\\r|\\m|\\s)' /etc/issue.net"
     output = ''
-    source.output_isEqualTo_terminal_output(config,command,output)
+    source.output_isEqualTo_terminal_output(config, command, output)
 
 # ---- 1.7.1.4 Ensure permissions on /etc/motd are configured (Not Scored) ---- #
 def check_permissions_on_etc_motd():
@@ -140,16 +143,12 @@ def check_gdm_login_banner_configured():
 
     if (gdm_file_exits == False):
         print('gdm file does not exist')
-        return False
+        source.return_function(False, config)
     else:
         if (gdm_file_contents == False):
-            print("Your system has NOT been configured correctly")
-            print('WARNING: please check the benchmark "' + config + '" ')
-            print('-----------------------------------------------------')
-            return False
+            source.return_function(False, config)
         else:
-            print('test was successful ... ')
-            print('-----------------------------------------------------')
+            source.return_function(True, config)
 
 # ----- 1.8 Ensure updates, patches, and additional security software are installed (Not Scored) ----#
 def check_updates_patches_installed():
@@ -164,9 +163,9 @@ def check_updates_patches_installed():
     exit_code = str(process.wait())
 
     if '100' in exit_code:
-        source.return_function(False,config)
+        source.return_function(False, config)
     elif '0' in exit_code:
-        source.return_function(True,config)
+        source.return_function(True, config)
     else:
         print('error')
 

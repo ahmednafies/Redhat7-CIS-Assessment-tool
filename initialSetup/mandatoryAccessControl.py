@@ -1,5 +1,7 @@
 import os
+
 import source
+
 
 #------ 1.6.1.1 Ensure SELinux is not disabled in bootloader configuration-----#
 
@@ -94,7 +96,7 @@ def check_setTroubleShoot_notInstalled():
     config = '1.6.1.4 Ensure SETroubleshoot is not installed (Scored)'
     command = 'rpm -q setroubleshoot'
     output = 'package setroubleshoot is not installed'
-    source.output_isIn_terminal_output(config,command,output)
+    source.output_isIn_terminal_output(config, command, output)
 
 #----- 1.6.1.5 Ensure the MCS Translation Service (mcstrans) is not installed ---#
 
@@ -102,7 +104,7 @@ def check_mcstrans_notInstalled():
     config = '1.6.1.5 Ensure the MCS Translation Service (mcstrans) is not installed'
     command = 'rpm -q mcstrans'
     output = 'package mcstrans is not installed'
-    source.output_isIn_terminal_output(config,command,output)
+    source.output_isIn_terminal_output(config, command, output)
 
 #----------1.6.1.6 Ensure no unconfined daemons exist (Scored)--------#
 
@@ -112,7 +114,7 @@ def check_noConfined_deamons_exist():
     config = '1.6.1.6 Ensure no unconfined daemons exist (Scored)'
     command = 'ps -eZ | egrep "initrc" | egrep -vw '+'"tr|ps|egrep|bash|awk" | ' + "tr ':' ' ' | awk '{print $NF }'"
     output = ''
-    source.output_isEqualTo_terminal_output(config,command,output)
+    source.output_isEqualTo_terminal_output(config, command, output)
 
 # ------ 1.6.2 Ensure SELinux is installed (Scored) --------#
 
@@ -120,6 +122,6 @@ def check_SElinux_installed():
     config = '1.6.2 Ensure SELinux is installed (Scored)'
     command = 'rpm -q libselinux'
     output = 'not installed'
-    source.output_isIn_terminal_output_inverse(config,command,output)
+    source.output_isIn_terminal_output_inverse(config, command, output)
 
 #--------------------------------------------------------------------#

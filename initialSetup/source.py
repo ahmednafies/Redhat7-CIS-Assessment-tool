@@ -114,7 +114,6 @@ def output_isEqualTo_terminal_output(config,command,output):
 
     if (terminal_output == output):
         print('test was successful ... ')
-        print(terminal_output)
     else:
         print("Your system has NOT been configured correctly")
         print('WARNING: please check the benchmark "'+config+'" ')

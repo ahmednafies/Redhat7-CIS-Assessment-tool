@@ -1,6 +1,7 @@
-import source
 import os
 import re
+
+import source
 
 
 #-------- 1.5.1 Ensure core dumps are restricted (Scored) ---------#
@@ -22,9 +23,9 @@ def check_core_dumps_restricted():
 
 
     if (expected_output1.search(terminal_output1) and expected_output2.search(terminal_output2)):
-        source.return_function(True,config)
+        source.return_function(True, config)
     else:
-        source.return_function(False,config)
+        source.return_function(False, config)
 
 #---------1.5.2 Ensure XD/NX support is enabled (Not Scored) --------#
 
@@ -33,7 +34,7 @@ def check_NX_XD_support_enabled():
     config = '1.5.2 Ensure XD/NX support is enabled (Not Scored)'
     command = 'dmesg | grep NX'
     output = 'NX (Execute Disable) protection: active'
-    source.output_isIn_terminal_output(config,command,output)
+    source.output_isIn_terminal_output(config, command, output)
 
 # ---- 1.5.3 Ensure address space layout randomization (ASLR) is enabled ----#
 
@@ -41,7 +42,7 @@ def check_ASLR():
     config = '1.5.3 Ensure address space layout randomization (ASLR) is enabled '
     command = 'sysctl kernel.randomize_va_space'
     output = 'kernel.randomize_va_space = 2'
-    source.output_isIn_terminal_output(config,command,output)
+    source.output_isIn_terminal_output(config, command, output)
 
 #----- 1.5.4 Ensure prelink is disabled (Scored) ---- #
 
@@ -49,6 +50,6 @@ def check_prelink_disabled():
     config = '1.5.4 Ensure prelink is disabled (Scored)'
     command = 'rpm -q prelink'
     output = 'package prelink is not installed'
-    source.output_isIn_terminal_output(config,command,output)
+    source.output_isIn_terminal_output(config, command, output)
 
 #---#----------------------------------------------------------#

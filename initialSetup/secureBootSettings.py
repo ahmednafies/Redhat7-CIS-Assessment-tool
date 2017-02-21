@@ -1,6 +1,8 @@
-import re
-import source
 import os
+import re
+
+import source
+
 
 # ---------- 1.4.3 Ensure authentication required for single user mode (Not Scored) -------------#
 
@@ -19,7 +21,7 @@ def check_singleUserMode_authentication():
     expected_output = re.compile(r'ExecStart=-/bin/sh -c "/usr/sbin/sulogin; /usr/bin/systemctl --fail --no-block default')
 
     if (expected_output.search(terminal_output1) and expected_output.search(terminal_output2)):
-        source.return_function(True,config)
+        source.return_function(True, config)
     else:
-        source.return_function(False,config)
+        source.return_function(False, config)
 

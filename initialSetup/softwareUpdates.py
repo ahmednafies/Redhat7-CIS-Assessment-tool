@@ -1,7 +1,9 @@
-import subprocess
 import os
 import re
+
 import source
+
+
 # function runs yum check-update commands and returns what the command line shows
 
 
@@ -54,9 +56,9 @@ def gpg_globally_activated ():
 
     if (yum_conf != True or yum_repos != True):
 
-        source.return_function(False,config)
+        source.return_function(False, config)
     else:
-        source.return_function(True,config)
+        source.return_function(True, config)
 
 #-------------1.2.5 Disable the rhnsd Daemon (Not Scored)-------#
 
@@ -74,7 +76,7 @@ def check_rhnsd_daemon_disabled():
     grep_output = terminal_variable.read()
 
     if (word.search(grep_output) == True or error.search(grep_output) == True):
-        source.return_function(False,config)
+        source.return_function(False, config)
     else:
-        source.return_function(True,config)
+        source.return_function(True, config)
 #--------------------------------------------------------------------#
