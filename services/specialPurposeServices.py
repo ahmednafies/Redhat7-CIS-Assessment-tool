@@ -132,7 +132,31 @@ def check_NFS_and_RPC_not_installed():
     terminal_variable = os.popen(command2)
     terminal_output2 = terminal_variable.read()
 
-    if output in terminal_output1 and output in terminal_output1:
+    if output in terminal_output1 and output in terminal_output2:
         source.return_function(True, config)
     else:
         source.return_function(False, config)
+
+# ---- 2.2.8 Ensure DNS Server is not enabled (Scored) ---#
+
+def check_DNS_server_not_enabled():
+    config = '2.2.8 Ensure DNS Server is not enabled (Scored)'
+    command = 'systemctl is-enabled named'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
+
+# ---- 2.2.9 Ensure FTP Server is not enabled (Scored) ---#
+def check_ftp_server_not_enabled():
+    config = '2.2.9 Ensure FTP Server is not enabled (Scored)'
+    command = 'systemctl is-enabled vsftpd'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
+
+# ---- 2.2.10 Ensure HTTP server is not enabled (Scored) --- #
+def check_http_server_not_enabled():
+    config = '2.2.10 Ensure HTTP server is not enabled (Scored)'
+    command = 'systemctl is-enabled httpd'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
+
+

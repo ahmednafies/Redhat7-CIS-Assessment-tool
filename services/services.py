@@ -17,6 +17,13 @@ def special_purpose_services_check():
     specialPurposeServices.check_x_window_system_not_installed()
     specialPurposeServices.check_Avahi_server_not_enabled()
     specialPurposeServices.check_CUPS_is_not_enabled()
+    specialPurposeServices.check_DHCP_server_is_not_enabled()
+    specialPurposeServices.check_LDAP_server_is_not_enabled()
+    specialPurposeServices.check_NFS_and_RPC_not_installed()
+    specialPurposeServices.check_DNS_server_not_enabled()
+    specialPurposeServices.check_ftp_server_not_enabled()
+    specialPurposeServices.check_http_server_not_enabled()
+
 
 def run():
 #    services_check()
