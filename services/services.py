@@ -1,7 +1,6 @@
 import inetdServices
 import timeSynchronization
 import serviceClients
-import networkConfiguration
 
 
 def services_check():
@@ -47,27 +46,11 @@ def service_clients_check():
     serviceClients.check_LDAP_client_not_installed()
 
 
-def network_configuration_check():
-    networkConfiguration.check_ip_forwarding_is_disabled()
-    networkConfiguration.check_packet_redirect_sending_is_disabled()
-    networkConfiguration.check_source_routed_packets_not_accepted()
-    networkConfiguration.check_ICMP_redirects_are_not_accepted()
-    networkConfiguration.check_secure_ICMP_redirect_are_not_accepted()
-    networkConfiguration.check_suspicious_packets_are_logged()
-    networkConfiguration.check_broadCast_ICMP_request_ignored()
-    networkConfiguration.check_bogus_icmp_requests_ignored()
-    networkConfiguration.check_reverse_path_filtering_enabled()
-    networkConfiguration.check_tcp_SYN_cookies_is_enabled()
-    networkConfiguration.check_IPv6_router_ads_not_accepted()
-    networkConfiguration.check_IPv6_redirect_not_accepted()
-    networkConfiguration.check_IPv6_is_disabled()
-
 
 def run():
-    #    services_check()
-    #    special_purpose_services_check()
-    #    service_clients_check()
-    network_configuration_check()
+    services_check()
+    special_purpose_services_check()
+    service_clients_check()
 
 
 run()
