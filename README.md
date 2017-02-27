@@ -24,9 +24,9 @@ configured (Not Scored)
 -1.3.2 Ensure filesystem integrity is regularly checked (Scored)
 
 
-
 - 1.7.1.1 Ensure message of the day is configured properly (Scored)
 
+- 2.2.15 Ensure mail transfer agent is configured for local-only mode (Scored)
 
 included but requires sudo rights
 

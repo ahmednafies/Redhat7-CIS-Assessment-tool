@@ -27,7 +27,8 @@ def special_purpose_services_check():
     timeSynchronization.check_samba_is_not_enabled()
     timeSynchronization.check_http_proxy_is_not_enabled()
     timeSynchronization.check_SNMP_server_not_enabled()
-    
+    timeSynchronization.check_NIS_server_is_not_enabled()
+    timeSynchronization.rsh_server_not_enabled()
 
 def run():
 #    services_check()
