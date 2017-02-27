@@ -1,6 +1,7 @@
 import inetdServices
 import timeSynchronization
 import serviceClients
+import networkConfiguration
 
 def services_check():
     inetdServices.check_charge_services_not_enabled()
@@ -43,9 +44,15 @@ def service_clients_check():
     serviceClients.check_telnet_client_not_installed()
     serviceClients.check_LDAP_client_not_installed()
 
+def network_configuration_check():
+    networkConfiguration.check_ip_forwarding_is_disabled()
+    networkConfiguration.check_packet_redirect_sending_is_disabled()
+
 def run():
 #    services_check()
 #    special_purpose_services_check()
-    service_clients_check()
+#    service_clients_check()
+    network_configuration_check()
+
 
 run()
