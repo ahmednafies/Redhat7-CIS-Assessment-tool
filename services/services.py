@@ -1,6 +1,7 @@
 import inetdServices
 import timeSynchronization
 
+
 def services_check():
     inetdServices.check_charge_services_not_enabled()
     inetdServices.check_daytime_services_not_enabled()
@@ -9,6 +10,7 @@ def services_check():
     inetdServices.check_time_services_not_enabled()
     inetdServices.check_tftp_server_not_enabled()
     inetdServices.check_xinetd_not_enabled()
+
 
 def special_purpose_services_check():
     timeSynchronization.check_time_sync_is_used()
@@ -28,10 +30,16 @@ def special_purpose_services_check():
     timeSynchronization.check_http_proxy_is_not_enabled()
     timeSynchronization.check_SNMP_server_not_enabled()
     timeSynchronization.check_NIS_server_is_not_enabled()
-    timeSynchronization.rsh_server_not_enabled()
+    timeSynchronization.check_rsh_server_not_enabled()
+    timeSynchronization.check_talk_server_is_not_enabled()
+    timeSynchronization.check_telnet_server_not_enabled()
+    timeSynchronization.check_tftp_server_not_enabled()
+    timeSynchronization.check_rsync_server_is_not_enabled()
+
 
 def run():
-#    services_check()
+#   services_check()
     special_purpose_services_check()
+
 
 run()

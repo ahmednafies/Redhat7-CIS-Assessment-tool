@@ -201,9 +201,10 @@ def check_NIS_server_is_not_enabled():
     output = 'disabled'
     source.output_isIn_terminal_output(config, command, output)
 
+
 # ---- 2.2.17 Ensure rsh server is not enabled (Scored) ---#
 
-def rsh_server_not_enabled():
+def check_rsh_server_not_enabled():
     config = '2.2.17 Ensure rsh server is not enabled (Scored)'
     command1 = 'systemctl is-enabled rsh.socket'
     command2 = 'systemctl is-enabled rlogin.socket'
@@ -221,10 +222,43 @@ def rsh_server_not_enabled():
     terminal_output3 = terminal_variable.read()
 
     if output in terminal_output1 and output in terminal_output2 and output in terminal_output3:
-        source.return_function(True,config)
+        source.return_function(True, config)
     else:
-        source.return_function(False,config)
+        source.return_function(False, config)
 
 
+# --- 2.2.18 Ensure talk server is not enabled (Scored) ---#
+
+def check_talk_server_is_not_enabled():
+    config = '2.2.18 Ensure talk server is not enabled (Scored)'
+    command = 'systemctl is-enabled ntalk'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config, command, output)
 
 
+# ---- 2.2.19 Ensure telnet server is not enabled (Scored) ----#
+
+def check_telnet_server_not_enabled():
+    config = '2.2.19 Ensure telnet server is not enabled (Scored)'
+    command = 'systemctl is-enabled telnet.socket'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config, command, output)
+
+
+# ---- 2.2.20 Ensure tftp server is not enabled (Scored) ---#
+
+def check_tftp_server_not_enabled():
+    config = '2.2.20 Ensure tftp server is not enabled (Scored)'
+    command = 'systemctl is-enabled tftp.socket'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config, command, output)
+
+
+# --- 2.2.21 Ensure rsync service is not enabled (Scored) ----#
+
+def check_rsync_server_is_not_enabled():
+    config = '2.2.21 Ensure rsync service is not enabled (Scored)'
+    command = 'systemctl is-enabled rsyncd'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config, command, output)
+    # -------------------end ----------------------------#
