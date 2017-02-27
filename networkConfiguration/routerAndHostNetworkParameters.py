@@ -1,4 +1,6 @@
-import os,source
+import os
+import source
+
 
 # ---- 3.2.1 Ensure source routed packets are not accepted (Scored) ---- #
 
@@ -146,4 +148,3 @@ def check_tcp_SYN_cookies_is_enabled():
     command = 'sysctl net.ipv4.tcp_syncookies'
     output = 'net.ipv4.tcp_syncookies = 1'
     source.output_isIn_terminal_output(config, command, output)
-

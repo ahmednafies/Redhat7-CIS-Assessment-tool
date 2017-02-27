@@ -1,4 +1,5 @@
-import os,source
+import os
+import source
 
 
 # --- 3.3.1 Ensure IPv6 router advertisements are not accepted (Scored) --- #
@@ -56,4 +57,3 @@ def check_IPv6_is_disabled():
     command = 'modprobe -c | grep ipv6'
     output = 'options ipv6 disable=1'
     source.output_isIn_terminal_output(config, command, output)
-

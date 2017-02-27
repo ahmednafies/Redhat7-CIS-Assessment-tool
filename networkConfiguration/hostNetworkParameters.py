@@ -33,4 +33,3 @@ def check_packet_redirect_sending_is_disabled():
         source.return_function(True, config)
     else:
         source.return_function(False, config)
-
