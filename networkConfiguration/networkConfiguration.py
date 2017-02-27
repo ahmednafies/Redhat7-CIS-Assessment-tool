@@ -2,7 +2,7 @@ import hostNetworkParameters
 import routerAndHostNetworkParameters
 import ipv6
 import tcpWrappers
-
+import uncommonNetworkProtocols
 
 
 def host_network_parameters_check():
@@ -30,11 +30,14 @@ def tcp_wrappers_check():
     tcpWrappers.check_permissions_on_etc_hosts_allow_isConfigured()
     tcpWrappers.check_permissions_on_etc_hosts_deny_isConfigured()
 
+def uncommon_network_protocols_check():
+    uncommonNetworkProtocols.check_DCCP_is_disabled()
 
 def run ():
-    host_network_parameters_check()
-    router_and_host_network_parameters()
-    ipv6_check()
-    tcp_wrappers_check()
+    # host_network_parameters_check()
+    # router_and_host_network_parameters()
+    # ipv6_check()
+    # tcp_wrappers_check()
+    uncommon_network_protocols_check()
 
 run()
