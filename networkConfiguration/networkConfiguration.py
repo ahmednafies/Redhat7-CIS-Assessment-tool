@@ -3,6 +3,7 @@ import routerAndHostNetworkParameters
 import ipv6
 import tcpWrappers
 import uncommonNetworkProtocols
+import firewallConfiguration
 
 
 def host_network_parameters_check():
@@ -37,14 +38,20 @@ def tcp_wrappers_check():
 def uncommon_network_protocols_check():
     uncommonNetworkProtocols.check_DCCP_is_disabled()
     uncommonNetworkProtocols.check_SCTP_is_disabled()
+    uncommonNetworkProtocols.check_rds_is_disabled()
+    uncommonNetworkProtocols.check_tipc_is_disabled()
 
+
+def firewall_configuration_check():
+    firewallConfiguration.check_ip_tables_installed()
 
 def run():
     # host_network_parameters_check()
     # router_and_host_network_parameters()
     # ipv6_check()
     # tcp_wrappers_check()
-    uncommon_network_protocols_check()
+    # uncommon_network_protocols_check()
+    firewall_configuration_check()
 
 
 run()

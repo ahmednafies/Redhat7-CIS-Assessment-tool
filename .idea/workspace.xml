@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2b348a-e49e-46e7-aeeb-a019ea5ad697" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/networkConfiguration/firewallConfiguration.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networkConfiguration/hostNetworkParameters.py" afterPath="$PROJECT_DIR$/networkConfiguration/hostNetworkParameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networkConfiguration/ipv6.py" afterPath="$PROJECT_DIR$/networkConfiguration/ipv6.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networkConfiguration/networkConfiguration.py" afterPath="$PROJECT_DIR$/networkConfiguration/networkConfiguration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networkConfiguration/routerAndHostNetworkParameters.py" afterPath="$PROJECT_DIR$/networkConfiguration/routerAndHostNetworkParameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networkConfiguration/tcpWrappers.py" afterPath="$PROJECT_DIR$/networkConfiguration/tcpWrappers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networkConfiguration/uncommonNetworkProtocols.py" afterPath="$PROJECT_DIR$/networkConfiguration/uncommonNetworkProtocols.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,12 +20,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="uncommonNetworkProtocols.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="networkConfiguration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/networkConfiguration/networkConfiguration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uncommonNetworkProtocols.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/networkConfiguration/uncommonNetworkProtocols.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-165">
-              <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+            <state relative-caret-position="269">
+              <caret line="97" column="48" lean-forward="false" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firewallConfiguration.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/networkConfiguration/firewallConfiguration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="68" lean-forward="false" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,9 +111,10 @@
         <option value="$PROJECT_DIR$/networkConfiguration/tcpWrappers.py" />
         <option value="$PROJECT_DIR$/networkConfiguration/routerAndHostNetworkParameters.py" />
         <option value="$PROJECT_DIR$/networkConfiguration/hostNetworkParameters.py" />
-        <option value="$PROJECT_DIR$/networkConfiguration/networkConfiguration.py" />
         <option value="$PROJECT_DIR$/networkConfiguration/ipv6.py" />
         <option value="$PROJECT_DIR$/networkConfiguration/uncommonNetworkProtocols.py" />
+        <option value="$PROJECT_DIR$/networkConfiguration/firewallConfiguration.py" />
+        <option value="$PROJECT_DIR$/networkConfiguration/networkConfiguration.py" />
       </list>
     </option>
   </component>
@@ -140,7 +162,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
+              <option name="myItemId" value="networkConfiguration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,7 +446,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/read me" />
     <entry file="file://$PROJECT_DIR$/initialSetup/initialSetup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
@@ -713,34 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networkConfiguration/source.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networkConfiguration/routerAndHostNetworkParameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networkConfiguration/networkConfiguration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/networkConfiguration/hostNetworkParameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -761,14 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networkConfiguration/tcpWrappers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/timeSynchronization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2820">
@@ -777,11 +762,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/networkConfiguration/source.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networkConfiguration/routerAndHostNetworkParameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="150" column="0" lean-forward="true" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networkConfiguration/tcpWrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networkConfiguration/networkConfiguration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/networkConfiguration/uncommonNetworkProtocols.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+        <state relative-caret-position="269">
+          <caret line="97" column="48" lean-forward="false" selection-start-line="97" selection-start-column="48" selection-end-line="97" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networkConfiguration/firewallConfiguration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="68" lean-forward="false" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
