@@ -159,4 +159,35 @@ def check_http_server_not_enabled():
     output = 'disabled'
     source.output_isIn_terminal_output(config,command,output)
 
+#---- 2.2.11 Ensure IMAP and POP3 server is not enabled (Scored) ---#
 
+def check_IMAP_and_POP3_server_not_enabled():
+    config = '2.2.11 Ensure IMAP and POP3 server is not enabled (Scored)'
+    command = 'systemctl is-enabled dovecot'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
+
+# ---- 2.2.12 Ensure Samba is not enabled (Scored) ----- #
+
+def check_samba_is_not_enabled():
+    config = '2.2.12 Ensure Samba is not enabled (Scored)'
+    command = 'systemctl is-enabled smb'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
+
+#---- 2.2.13 Ensure HTTP Proxy Server is not enabled (Scored) ----#
+def check_http_proxy_is_not_enabled():
+    config = '2.2.13 Ensure HTTP Proxy Server is not enabled (Scored) '
+    command = 'systemctl is-enabled squid'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
+
+#---- 2.2.14 Ensure SNMP Server is not enabled (Scored) ---- #
+
+def check_SNMP_server_not_enabled():
+    config = '2.2.14 Ensure SNMP Server is not enabled (Scored)'
+    command = 'systemctl is-enabled snmpd'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
+
+#
