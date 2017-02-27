@@ -116,3 +116,23 @@ def check_LDAP_server_is_not_enabled():
 
 # --- 2.2.7 Ensure NFS and RPC are not enabled (Scored) ---#
 
+def check_NFS_and_RPC_not_installed():
+
+    config = '2.2.7 Ensure NFS and RPC are not enabled (Scored)'
+    command1 = 'systemctl is-enabled nfs'
+    command2 = 'systemctl is-enabled rpcbind'
+    output = 'disabled'
+
+    print('checking "' + config + '" ..... ')
+
+
+    terminal_variable = os.popen(command1)
+    terminal_output1 = terminal_variable.read()
+
+    terminal_variable = os.popen(command2)
+    terminal_output2 = terminal_variable.read()
+
+    if output in terminal_output1 and output in terminal_output1:
+        source.return_function(True, config)
+    else:
+        source.return_function(False, config)
