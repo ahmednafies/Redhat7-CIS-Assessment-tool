@@ -20,8 +20,7 @@ def check_singleUserMode_authentication():
 
     expected_output = re.compile(r'ExecStart=-/bin/sh -c "/usr/sbin/sulogin; /usr/bin/systemctl --fail --no-block default')
 
-    if (expected_output.search(terminal_output1) and expected_output.search(terminal_output2)):
+    if expected_output.search(terminal_output1) and expected_output.search(terminal_output2):
         source.return_function(True, config)
     else:
         source.return_function(False, config)
-

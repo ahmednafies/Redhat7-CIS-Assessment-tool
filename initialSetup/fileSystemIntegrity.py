@@ -16,9 +16,7 @@ def check_aide_installed():
 
     word = re.compile(r'not installed')
 
-    if (word.search(terminal_output)):
+    if word.search(terminal_output):
         source.return_function(False, config)
     else:
         source.return_function(True, config)
-
-
