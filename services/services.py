@@ -13,6 +13,8 @@ def services_check():
 def special_purpose_services_check():
     specialPurposeServices.check_time_sync_is_used()
     specialPurposeServices.check_ntp_configured()
+    specialPurposeServices.check_x_window_system_not_installed()
+
 
 def run():
 #    services_check()

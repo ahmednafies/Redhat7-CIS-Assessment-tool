@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba2b348a-e49e-46e7-aeeb-a019ea5ad697" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/additionalHardening.py" afterPath="$PROJECT_DIR$/initialSetup/additionalHardening.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/fileSystemConfiguration.py" afterPath="$PROJECT_DIR$/initialSetup/fileSystemConfiguration.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/fileSystemIntegrity.py" afterPath="$PROJECT_DIR$/initialSetup/fileSystemIntegrity.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/initialSetup.py" afterPath="$PROJECT_DIR$/initialSetup/initialSetup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/mandatoryAccessControl.py" afterPath="$PROJECT_DIR$/initialSetup/mandatoryAccessControl.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/secureBootSettings.py" afterPath="$PROJECT_DIR$/initialSetup/secureBootSettings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/softwareUpdates.py" afterPath="$PROJECT_DIR$/initialSetup/softwareUpdates.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/source.py" afterPath="$PROJECT_DIR$/initialSetup/source.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initialSetup/warningBanners.py" afterPath="$PROJECT_DIR$/initialSetup/warningBanners.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/inetdServices.py" afterPath="$PROJECT_DIR$/services/inetdServices.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/services.py" afterPath="$PROJECT_DIR$/services/services.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/specialPurposeServices.py" afterPath="$PROJECT_DIR$/services/specialPurposeServices.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="services.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="services.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/services.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            <state relative-caret-position="240">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -41,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="specialPurposeServices.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="specialPurposeServices.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/specialPurposeServices.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+            <state relative-caret-position="329">
+              <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -56,7 +46,7 @@
       <file leaf-file-name="source.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/source.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
+            <state relative-caret-position="734">
               <caret line="142" column="41" lean-forward="false" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -754,7 +744,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/source.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
+        <state relative-caret-position="734">
           <caret line="142" column="41" lean-forward="false" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
@@ -762,22 +752,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/specialPurposeServices.py">
+    <entry file="file://$PROJECT_DIR$/services/services.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="46" column="6" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/services.py">
+    <entry file="file://$PROJECT_DIR$/services/specialPurposeServices.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state relative-caret-position="329">
+          <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

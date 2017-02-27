@@ -44,4 +44,12 @@ def check_ntp_configured():
     else:
         source.return_function(False, config)
 
-#-----
+#----- 2.2.2 Ensure X Window System is not installed (Scored) ----#
+
+def check_x_window_system_not_installed():
+
+    config = '2.2.2 Ensure X Window System is not installed (Scored)'
+    command = 'rpm -qa xorg-x11*'
+    output = ''
+    source.output_isIn_terminal_output(config,command,output)
+    
