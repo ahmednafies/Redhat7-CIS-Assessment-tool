@@ -1,6 +1,6 @@
 import inetdServices
 import timeSynchronization
-
+import serviceClients
 
 def services_check():
     inetdServices.check_charge_services_not_enabled()
@@ -36,10 +36,16 @@ def special_purpose_services_check():
     timeSynchronization.check_tftp_server_not_enabled()
     timeSynchronization.check_rsync_server_is_not_enabled()
 
+def service_clients_check():
+    serviceClients.check_NIS_Client_not_installed()
+    serviceClients.check_rsh_client_not_installed()
+    serviceClients.check_talk_client_not_installed()
+    serviceClients.check_telnet_client_not_installed()
+    serviceClients.check_LDAP_client_not_installed()
 
 def run():
-#   services_check()
-    special_purpose_services_check()
-
+#    services_check()
+#    special_purpose_services_check()
+    service_clients_check()
 
 run()
