@@ -51,5 +51,22 @@ def check_x_window_system_not_installed():
     config = '2.2.2 Ensure X Window System is not installed (Scored)'
     command = 'rpm -qa xorg-x11*'
     output = ''
+    source.output_isEqualTo_terminal_output(config,command,output)
+
+# ---- 2.2.3 Ensure Avahi Server is not enabled (Scored) --- #
+
+def check_Avahi_server_not_enabled():
+
+    config = '2.2.3 Ensure Avahi Server is not enabled (Scored)'
+    command = 'systemctl is-enabled avahi-daemon'
+    output = 'disabled'
     source.output_isIn_terminal_output(config,command,output)
-    
+
+# ---- 2.2.4 Ensure CUPS is not enabled (Scored) ---- #
+
+def check_CUPS_is_not_enabled():
+
+    config = '2.2.4 Ensure CUPS is not enabled (Scored)'
+    command = 'systemctl is-enabled cups'
+    output = 'disabled'
+    source.output_isIn_terminal_output(config,command,output)
