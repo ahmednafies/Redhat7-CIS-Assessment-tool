@@ -54,6 +54,13 @@ def network_configuration_check():
     networkConfiguration.check_ICMP_redirects_are_not_accepted()
     networkConfiguration.check_secure_ICMP_redirect_are_not_accepted()
     networkConfiguration.check_suspicious_packets_are_logged()
+    networkConfiguration.check_broadCast_ICMP_request_ignored()
+    networkConfiguration.check_bogus_icmp_requests_ignored()
+    networkConfiguration.check_reverse_path_filtering_enabled()
+    networkConfiguration.check_tcp_SYN_cookies_is_enabled()
+    networkConfiguration.check_IPv6_router_ads_not_accepted()
+    networkConfiguration.check_IPv6_redirect_not_accepted()
+    networkConfiguration.check_IPv6_is_disabled()
 
 
 def run():
