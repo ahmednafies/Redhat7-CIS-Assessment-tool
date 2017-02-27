@@ -88,7 +88,6 @@ def check_separate_partition_exits(config,command,output):
         print('WARNING: please check the benchmark "'+config+'" ')
 
 
-
     print('-----------------------------------------------------')
 
 def check_options_function(config,cmd,option):
