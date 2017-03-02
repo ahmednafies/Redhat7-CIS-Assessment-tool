@@ -46,11 +46,11 @@ def firewall_configuration_check():
     firewallConfiguration.check_ip_tables_installed()
     firewallConfiguration.check_default_deny_firewall_policy()
 def run():
-    # host_network_parameters_check()
-    # router_and_host_network_parameters()
-    # ipv6_check()
-    # tcp_wrappers_check()
-    # uncommon_network_protocols_check()
+    host_network_parameters_check()
+    router_and_host_network_parameters()
+    ipv6_check()
+    tcp_wrappers_check()
+    uncommon_network_protocols_check()
     firewall_configuration_check()
 
 
