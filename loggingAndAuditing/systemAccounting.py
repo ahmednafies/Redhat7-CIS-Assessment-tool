@@ -50,3 +50,64 @@ def check_audit_service_enabled():
     command = 'systemctl is-enabled auditd'
     output = 'enabled'
     source.output_isEqualTo_terminal_output(config,command,output)
+
+# --- 4.1.4 Ensure events that modify date and time information are collected(Scored)---#
+
+def check_date_time_modifying_events():
+    config = '4.1.4 Ensure events that modify date and time information are collected (Scored)'
+    command = 'sudo grep time-change /etc/audit/audit.rules'
+
+    arch = source.check_platform()
+
+    if arch == '64bit':
+        output = '-a always,exit -F arch=b64 -S adjtimex -S settimeofday -k time-change ' \
+                 '-a always,exit -F arch=b32 -S adjtimex -S settimeofday -S stime -k time-change ' \
+                 '-a always,exit -F arch=b64 -S clock_settime -k time-change ' \
+                 '-a always,exit -F arch=b32 -S clock_settime -k time-change ' \
+                 '-w /etc/localtime -p wa -k time-change'
+    else:
+        output = '-a always,exit -F arch=b32 -S adjtimex -S settimeofday -S stime' \
+                 ' -k time-change-a always,exit -F arch=b32 -S clock_settime -k ' \
+                 'time-change-w /etc/localtime -p wa -k time-change'
+
+    source.output_isIn_terminal_output(config,command,output)
+
+
+#---- 4.1.5 Ensure events that modify user/group information are collected (Scored) ---- #
+
+def check_user_group_modifying_events():
+
+    config = '4.1.5 Ensure events that modify user/group information are collected (Scored)'
+    command = 'sudo grep identity /etc/audit/audit.rules'
+    output = '-w /etc/group -p wa -k identity ' \
+             '-w /etc/passwd -p wa -k identity ' \
+             '-w /etc/gshadow -p wa -k identity ' \
+             '-w /etc/shadow -p wa -k identity ' \
+             '-w /etc/security/opasswd -p wa -k identity'
+
+    source.output_isIn_terminal_output(config,command,output)
+
+# --- 4.1.6 Ensure events that modify the system's network environment are collected (Scored)
+
+def check_system_network_enviroment_events():
+
+    config = "4.1.6 Ensure events that modify the system's network environment are collected (Scored)"
+    command = ' sudo grep system-locale /etc/audit/audit.rules'
+
+    arch = source.check_platform()
+    if arch == '64bit':
+        output = '-a always,exit -F arch=b64 -S sethostname -S setdomainname -k system-locale ' \
+                 '-a always,exit -F arch=b32 -S sethostname -S setdomainname -k system-locale ' \
+                 '-w /etc/issue -p wa -k system-locale ' \
+                 '-w /etc/issue.net -p wa -k system-locale ' \
+                 '-w /etc/hosts -p wa -k system-locale ' \
+                 '-w /etc/sysconfig/network -p wa -k system-locale'
+    else:
+        output = '-a always,exit -F arch=b32 -S sethostname -S setdomainname -k system-locale ' \
+                 '-w /etc/issue -p wa -k system-locale ' \
+                 '-w /etc/issue.net -p wa -k system-locale ' \
+                 '-w /etc/hosts -p wa -k system-locale ' \
+                 '-w /etc/sysconfig/network -p wa -k system-locale'
+
+    source.output_isIn_terminal_output_inverse(config,command,output)
+    

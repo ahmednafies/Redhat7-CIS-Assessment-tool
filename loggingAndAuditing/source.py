@@ -2,7 +2,12 @@ import subprocess
 import os
 
 
+import platform
 #######---- example functions -----#######
+
+def check_platform():
+    os_arch = platform.architecture()[0]
+    return os_arch
 
 def example_complicated():
     cmdping = "ping -c4 www.google.biz"

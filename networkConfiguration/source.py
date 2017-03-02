@@ -1,6 +1,6 @@
 import subprocess
 import os
-#######---- example functions -----#######
+# ---- example functions -------#
 
 def example_complicated():
     cmdping = "ping -c4 www.google.biz"

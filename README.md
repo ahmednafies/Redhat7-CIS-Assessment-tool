@@ -32,6 +32,20 @@ configured (Not Scored)
 
 - 3.6.3 Ensure loopback traffic is configured (Scored)
 
+- 3.6.3 Ensure loopback traffic is configured (Scored)
+
+- 3.6.4 Ensure outbound and established connections are configured (Not
+Scored)
+
+- 3.6.5 Ensure firewall rules exist for all open ports (Scored)
+
+- 3.7 Ensure wireless interfaces are disabled (Not Scored)
+
+- 4.1.1.1 Ensure audit log storage size is configured (Not Scored)
+
+- 4.1.3 Ensure auditing for processes that start prior to auditd is enabled
+(Scored)
+
 included but requires sudo rights
 
 - 1.4.1 Ensure permissions on bootloader config are configured (Scored) - requires root access
@@ -42,11 +56,4 @@ included but requires sudo rights
 
 - 3.6.2 Ensure default deny firewall policy (Scored)
 
-- 3.6.3 Ensure loopback traffic is configured (Scored)
 
-- 3.6.4 Ensure outbound and established connections are configured (Not
-Scored)
-
-- 3.6.5 Ensure firewall rules exist for all open ports (Scored)
-
-- 3.7 Ensure wireless interfaces are disabled (Not Scored)
