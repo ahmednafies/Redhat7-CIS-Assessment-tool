@@ -34,3 +34,4 @@ def check_default_deny_firewall_policy():
     else:
         source.return_function(False,config)
 
+# --- 3.6.3 Ensure loopback traffic is configured (Scored) ---#

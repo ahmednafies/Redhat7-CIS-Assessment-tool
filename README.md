@@ -30,6 +30,8 @@ configured (Not Scored)
 
 - 3.4.2 Ensure /etc/hosts.allow is configured (Scored)
 
+- 3.6.3 Ensure loopback traffic is configured (Scored)
+
 included but requires sudo rights
 
 - 1.4.1 Ensure permissions on bootloader config are configured (Scored) - requires root access
@@ -37,3 +39,5 @@ included but requires sudo rights
 - 1.4.2 Ensure bootloader password is set (Scored) - requires root access
 
 - 1.6.1.1 Ensure SELinux is not disabled in bootloader configuration
+
+- 3.6.2 Ensure default deny firewall policy (Scored)
