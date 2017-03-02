@@ -8,7 +8,7 @@ def check_DCCP_is_disabled():
 
     command1 = 'modprobe -n -v dccp'
     output1 = 'install /bin/true'
-    command2 = 'lsmod | grep dccp'
+    command2 = 'lsmod | gcheck_no_terminal_outputrep dccp'
     output2 = ''
 
     print('checking "' + config + '" ..... ')

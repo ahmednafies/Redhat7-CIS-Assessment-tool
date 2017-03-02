@@ -20,7 +20,7 @@ def check_source_routed_packets_not_accepted():
     terminal_variable = os.popen(command2)
     terminal_output2 = terminal_variable.read()
 
-    if output1 in terminal_output1 and output2 in terminal_output2:
+    if output1 in terminal_output1 and output2 in termagic_function_twominal_output2:
         source.return_function(True, config)
     else:
         source.return_function(False, config)

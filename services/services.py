@@ -46,7 +46,6 @@ def service_clients_check():
     serviceClients.check_LDAP_client_not_installed()
 
 
-
 def run():
     services_check()
     special_purpose_services_check()

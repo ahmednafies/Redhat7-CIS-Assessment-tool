@@ -8,3 +8,4 @@ def check_ip_tables_installed():
     command = 'rpm -q iptables'
     output = 'not installed'
     source.output_isIn_terminal_output_inverse(config,command,output)
+

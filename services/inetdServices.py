@@ -109,6 +109,7 @@ def check_time_services_not_enabled():
     else:
         source.return_function(False, config)
 
+
 # ----- 2.1.6 Ensure tftp server is not enabled (Scored) ----#
 
 def check_tftp_server_not_enabled():
@@ -126,12 +127,12 @@ def check_tftp_server_not_enabled():
         source.return_function(False, config)
 
 
-#----- 2.1.7 Ensure xinetd is not enabled (Scored) ------#
+# ----- 2.1.7 Ensure xinetd is not enabled (Scored) ------#
 
 def check_xinetd_not_enabled():
     config = '2.1.7 Ensure xinetd is not enabled (Scored)'
     command = 'systemctl is-enabled xinetd'
     output = 'disabled'
-    source.output_isIn_terminal_output(config,command,output)
+    source.output_isIn_terminal_output(config, command, output)
 
-#---------------------------------------------------------#
+    # ---------------------------------------------------------#

@@ -30,6 +30,7 @@ def example_not_recommended():
     print "Today is ", now
 
 
+# ----- used functions ------ #
 def return_function(result, config):
     if (result == True):
         print (config)
@@ -45,7 +46,7 @@ def return_function(result, config):
 
 # ------- main source function ------- #
 
-def magic_function_one(config, command):
+def check_no_terminal_output(config, command):
     print('checking "' + config + '" ..... ')
     terminal_variable = os.popen(command)
     grep_output = terminal_variable.read()
@@ -61,7 +62,7 @@ def magic_function_one(config, command):
 
 
 # ----- main source function 2 ----#
-def magic_function_two(config, cmd_1, cmd_2):
+def check_no_terminal_output_two_cmd(config, cmd_1, cmd_2):
     print('checking "' + config + '" ..... ')
     terminal_variable = os.popen(cmd_1)
     grep_output = terminal_variable.read()

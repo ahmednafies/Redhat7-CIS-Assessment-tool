@@ -6,7 +6,7 @@ import source
 def check_mount_cramfs_disabled():
     conf = "1.1.1.1 Ensure mounting of cramfs filesystems is disabled (Scored)"
     cmd = "lsmod | grep cramfs"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # ---------- 1.1.1.2 Ensure mounting of freevxfs filesystems is disabled (Scored) ----#
@@ -14,7 +14,7 @@ def check_mount_cramfs_disabled():
 def check_mount_freevxfs_disabled():
     conf = "1.1.1.2 Ensure mounting of freevxfs filesystems is disabled (Scored)"
     cmd = "lsmod | grep freevxfs"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # ---------1.1.1.3 Ensure mounting of jffs2 filesystems is disabled (Scored)-----#
@@ -22,7 +22,7 @@ def check_mount_freevxfs_disabled():
 def check_mount_jffs2_disabled():
     conf = "1.1.1.3 Ensure mounting of jffs2 filesystems is disabled (Scored)"
     cmd = "lsmod | grep jffs2"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # ------- 1.1.1.4 Ensure mounting of hfs filesystems is disabled (Scored) -------#
@@ -30,7 +30,7 @@ def check_mount_jffs2_disabled():
 def check_mount_hfs_disabled():
     conf = "1.1.1.4 Ensure mounting of hfs filesystems is disabled (Scored)"
     cmd = "lsmod | grep hfs"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # ------ 1.1.1.5 Ensure mounting of hfsplus filesystems is disabled (Scored)-----#
@@ -38,14 +38,14 @@ def check_mount_hfs_disabled():
 def check_mount_hfsplus_disabled():
     conf = "1.1.1.5 Ensure mounting of hfsplus filesystems is disabled (Scored)"
     cmd = "lsmod | grep hfsplus"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # ---------1.1.1.6 Ensure mounting of squashfs filesystems is disabled (Scored)-----#
 def check_mount_squashfs_disabled():
     conf = "1.1.1.6 Ensure mounting of squashfs filesystems is disabled (Scored)"
     cmd = "lsmod | grep squashfs"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # --------1.1.1.7 Ensure mounting of udf filesystems is disabled (Scored)-----------#
@@ -53,14 +53,14 @@ def check_mount_squashfs_disabled():
 def check_mount_udf_disabled():
     conf = "1.1.1.7 Ensure mounting of udf filesystems is disabled (Scored)"
     cmd = "lsmod | grep udf"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # -------- 1.1.1.8 Ensure mounting of FAT filesystems is disabled (Scored)-----#
 def check_mount_fat_disabled():
     conf = "1.1.1.7 Ensure mounting of udf filesystems is disabled (Scored)"
     cmd = "lsmod | grep vfat"
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # ------------------------ 1.1.1 - 1.8 --------------------------#
@@ -72,7 +72,7 @@ def check_mount_fat_disabled():
 def check_partition_tmp_created():
     conf = "1.1.2 check if Separate Partition for /tmp is created"
     cmd = 'grep "[[:space:]]/tmp[[:space:]]" /etc/fstab'
-    source.magic_function_one(conf, cmd)
+    source.check_no_terminal_output(conf, cmd)
 
 
 # ------- 1.1.2 Set nodev option for /tmp Partition ----------#
@@ -81,7 +81,7 @@ def check_partition_tmp_nodev():
     conf = "1.1.3 Set nodev option for /tmp Partition "
     grep_output = 'grep "[[:space:]]/tmp[[:space:]]" /etc/fstab | grep nodev'
     mount_output = 'mount | grep "[[:space:]]/tmp[[:space:]]" | grep nodev'
-    source.magic_function_two(conf, grep_output, mount_output)
+    source.check_no_terminal_output_two_cmd(conf, grep_output, mount_output)
 
 
 # ------- 1.1.3 Set nosuid option for /tmp Partition (Scored)-----#
@@ -90,7 +90,7 @@ def check_partition_nosuid():
     conf = "1.1.4 Set nosuid option for /tmp Partition (Scored) "
     grep_output = 'grep "[[:space:]]/tmp[[:space:]]" /etc/fstab | grep nosuid'
     mount_output = 'mount | grep "[[:space:]]/tmp[[:space:]]" | grep nosuid'
-    source.magic_function_two(conf, grep_output, mount_output)
+    source.check_no_terminal_output_two_cmd(conf, grep_output, mount_output)
 
 
 # ------ 1.1.4 Set noexec option for /tmp Partition (Scored)--------#
@@ -99,7 +99,7 @@ def check_partition_noexec():
     conf = "1.1.5 Set noexec option for /tmp Partition (Scored)"
     grep_output = 'grep "[[:space:]]/tmp[[:space:]]" /etc/fstab | grep noexec'
     mount_output = 'mount | grep "[[:space:]]/tmp[[:space:]]" | grep noexec'
-    source.magic_function_two(conf, grep_output, mount_output)
+    source.check_no_terminal_output_two_cmd(conf, grep_output, mount_output)
 
 
 # ------- 1.1.6 Ensure separate partition exists for /var (Scored)----#
